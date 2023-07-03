@@ -8,7 +8,7 @@
 <dependencies>
 
 
-  <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+  <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all  -->
   <dependency>
    <groupId>org.mockito</groupId>
    <artifactId>mockito-all</artifactId>
@@ -94,30 +94,41 @@
 </dependency>
 
 
-
- </dependencies>
+</dependencies>
 
 
  <build>
+
   <plugins>
-
-   <plugin>
-    <!--
-    https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.11.0</version>
-   </plugin>
-
-
+	  
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.22.2</version>
    </plugin>
 
+
+   <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-compiler-plugin</artifactId>
+         <version>3.7.0</version>
+         <configuration>
+           <source>1.8</source>
+           <target>1.8</target>
+            <encoding>UTF-8</encoding>          
+         </configuration>
+       </plugin>     
+
+
+			 <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+            </plugin>
+
+
   </plugins>
+
  </build>
   
 </project>
